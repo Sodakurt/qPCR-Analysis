@@ -1,0 +1,43 @@
+# File Name: D:\h1 disc1 ctrl ipsc.eds
+# Comment: 
+# Operator: DEFAULT
+# Barcode: 
+# Instrument Type: QuantStudio™ 3 System
+# Block Type: 96-Well 0.2-mL Block
+# Instrument Name: 272324779
+# Instrument Serial Number: 272324779
+# Heated Cover Serial Number:
+# Block serial number: 20294614
+# Run Start Date/Time: 2023-11-29 04:28:15 PM CET
+# Run End Data/Time: 2023-11-29 06:07:47 PM CET
+# Run Duration: 99 minutes 32 seconds
+# Sample Volume: 10.0
+# Cover Temperature: 105.0
+# Passive Reference: ROX
+# PCR Stage/Step Number: Stage 2 Step 2
+# Melt Stage Number: 3
+# Quantification Cycle Method: CT
+# Analysis Date/Time: 2023-11-29 05:14:56 PM CET
+# Software Name and Version: Design & Analysis Software v2.7.0
+# Plugin Name and Version: Primary Analysis v1.8.0, Relative Quantification v1.6.0
+# Reduce dye signal crosstalk by algorithm: No (Default)
+# Exported On: 2023-11-29 05:19:35 PM CET
+"Sample","Target","Number of Replicates","Quantity","Number of Cqs","Cq Mean","Cq SD","Cq SE","Biogroup"
+"H1 A4","GAPDH 3","3","-","0","17.38586402482907","0.6813464628326155","0.3933755637278099",
+"H1 A4","NANOG","3","-","0","","","",
+"H1 A4","NESTIN","3","-","0","32.51472881187564","2.1856696799568924","1.2618969780827152",
+"H1 A4","OCT3/4","3","-","0","18.510600196825994","0.5232079799705672","0.30207426807816734",
+"H1 A4","PAX6","3","-","0","33.109159539878576","1.2857432521981194","0.7423242127653291",
+"H1 A4","SOX2","3","-","0","21.555643469676834","0.11735523939311847","0.06775507905442993",
+"H1 CTRL","GAPDH 3","3","-","0","17.86242864419003","0.17626037451756088","0.10176397467517803",
+"H1 CTRL","NANOG","3","-","0","","","",
+"H1 CTRL","NESTIN","3","-","0","31.138678150547676","0.33263290003898877","0.19204569437883606",
+"H1 CTRL","OCT3/4","3","-","0","18.659842704004966","0.18566442631505048","0.10719340651193184",
+"H1 CTRL","PAX6","3","-","0","33.30015623815259","0.4625161285658586","0.267033811332042",
+"H1 CTRL","SOX2","3","-","0","21.66155593101368","0.1157639104933942","0.06683632488580489",
+"H1 D5","GAPDH 3","3","-","0","17.855531025517656","0.21418477350284912","0.12365963663818896",
+"H1 D5","NANOG","3","-","0","","","",
+"H1 D5","NESTIN","3","-","0","31.51630416418844","0.5163216071365497","0.2980984188687072",
+"H1 D5","OCT3/4","3","-","0","19.020081303823847","0.01207868034278983","0.006973629347365149",
+"H1 D5","PAX6","3","-","0","31.54886683038298","0.12308584135553113","0.07106364364004747",
+"H1 D5","SOX2","3","-","0","21.57063563004745","0.14894872856424118","0.08599558853201715",
