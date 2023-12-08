@@ -4,12 +4,6 @@ import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
-
-# INITIALIZE DATA
-genes = ['GAPDH3', 'NANOG', 'NESTIN', 'OCT3/4', 'PAX6', 'SOX2'] 
-genes = ['OCT3/4', 'NANOG', 'NESTIN', 'PAX6', 'SOX2']
-lines = ['H1', 'A4', 'D5']
 
 #with open(r'C:\Users\magnu\OneDrive - University of Copenhagen\3. år Bachelorprojekt\Code\qPCR\qPCR-Analysis\qPCR_result.csv', 'r') as csvfile: 
 #    reader = csv.reader(csvfile)
@@ -20,9 +14,6 @@ lines = ['H1', 'A4', 'D5']
 
 # data from excel
 x = np.arange(3)
-# H1 = [1, 1, 1, 1, 1] 
-# A4 = [0.797, 0.657, 0.773, 0.277, 0.820]
-# D5 = [0.775, 0.796, 1.06, 0.766, 3.351] 
 H1_CTRL = [1, 1, 1] 
 A4 = [0.797, 0.657, 0.773]
 D5 = [0.775, 0.796, 1.06] 
@@ -58,12 +49,16 @@ errors = []
 
 # errors should be positive, and defined in the order of lower, upper 
 # ie. error = [[lower, lower], [upper, upper]]
+
+# Probably easier long term
+# https://pandas.pydata.org/docs/user_guide/visualization.html
+
 H1_error = [[0.18, 0.221837871, 0.178991865], [0.22, 0.285079244, 0.218014728]]
 A4_error = [[0.45, 0.100017331, 0.276251922], [0.9, 0.117977374, 0.429747618]]
 D5_error = [[0.229849966, 0.094512722, 0.229849966], [0.29349262, 0.107250592, 0.29349262]]
 
 errors = [H1_error] + [A4_error] + [D5_error]
-print('Error shape:', np.shape(errors))
+# print('Error shape:', np.shape(errors))
 
 data = {
     'marker': markers,
@@ -75,9 +70,7 @@ df = pd.DataFrame(data)
 
 # pivot the data for plotting
 dfp = df.pivot_table(index='marker', columns='cell line', values='normalized value', sort=False)
-print('DF data:\n', dfp, '\nwith shape', dfp.shape)
-# pivot the error
-
+# print('DF data:\n', dfp, '\nwith shape', dfp.shape)
 
 # PLOTTING 
 fig, ax = plt.subplots()
@@ -89,3 +82,4 @@ plt.title("qPCR")
 plt.show()
 
 # EXPORT 
+
