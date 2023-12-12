@@ -3,12 +3,12 @@ import os
 import numpy as np
 
 n_lines = 3
-n_markers = 4
-housekeeping_gene = 'GAPDH 3'
+n_markers = 1
+housekeeping_gene = 'GAPDH3'
 control = 'H1 CTRL'
 
 # get data
-filename = "Data.xlsx"
+filename = "Data1.xlsx"
 path = r'C:/Users/magnu/OneDrive/Dokumenter/Test/'
 file_path = os.path.join(path, filename)
 df = pd.read_excel(file_path)
@@ -59,4 +59,10 @@ dfm_average['Lower bound'] = dfm_average['Fold change'] - 2**-(dfm_average['ddCT
 dfm_average['Upper bound'] = 2**-(dfm_average['ddCT'] - dfm_average['std']) - dfm_average['Fold change']
 
 print(dfm_average)
+
+# calculate p-values
+
+
+# export 
+dfm_average.to_csv('result1.csv', index=False)
 
