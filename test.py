@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 #    for row in reader:
 #        print(row)
 
+
 # DATA ANALYSIS
 
 # data from excel
@@ -67,15 +68,20 @@ data = {
 }
 
 df = pd.DataFrame(data)
-
+print(df)
 # pivot the data for plotting
 dfp = df.pivot_table(index='marker', columns='cell line', values='normalized value', sort=False)
 # print('DF data:\n', dfp, '\nwith shape', dfp.shape)
 
+# Significance 
+#https://stackoverflow.com/questions/11517986/indicating-the-statistically-significant-difference-in-bar-graph 
+bars = np.arange(len(values))
+
 # PLOTTING 
+colors = ['midnightblue', 'mediumblue', 'cornflowerblue']
 fig, ax = plt.subplots()
 ax.set_ylim(0, 1.8)
-dfp.plot.bar(yerr=errors, ax=ax, capsize=4, rot=0, width=width)
+dfp.plot.bar(yerr=errors, ax=ax, capsize=4, rot=0, width=width, color=colors)
 plt.xlabel("Markers")
 plt.ylabel("Fold change")
 plt.title("qPCR")
