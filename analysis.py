@@ -61,15 +61,11 @@ dfm_average['Fold change'] = 2**-(dfm_average['ddCT'])
 dfm_average['Lower bound'] = dfm_average['Fold change'] - 2**-(dfm_average['ddCT'] + dfm_average['std'])
 dfm_average['Upper bound'] = 2**-(dfm_average['ddCT'] - dfm_average['std']) - dfm_average['Fold change']
 
-
 # calculate p-values
 print(dfm)
 dfm_average['p-values'] = np.arange(12)
 
-# maybe make function for every sample ? 
-
 # export 
 # dfm_average.to_csv('result.csv', index=False)
-
 
 print(dfm_average)
